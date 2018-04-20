@@ -2,28 +2,35 @@ package blackjack;
 
 public class Card
 {
-  private Suit suit;
-  private CardValue cardValue;
- 
-  public Card (CardValue cardValue, Suit suit)
+  
+  public static int[] cardsInPlay = {0};
+  public int cardValue;
+  public Card ()
   {
-    this.cardValue = cardValue;
-    this.suit = suit;
+    int num = 0;
+              
+    boolean notInUse = false;
+    while (notInUse == false){
+        num = 1 + (int)(Math.random() * 51);
+        for (int i = 0; i<= cardsInPlay.length;i++ ){
+            if (cardsInPlay[i] == num){
+                notInUse = false;
+                break;
+            } else {
+                notInUse = true;
+            }
+        }
+    }
+    num = (int) num/4;
+    if(num >= 10){
+        num = 10;
+    }
+    this.cardValue = num;
   }
-
-  public Suit getSuit()
-  {
-    return suit;
-  }
- 
-  public CardValue getCardValue()
-  {
-    return cardValue;
-  }
- 
-  public void setCardValue(CardValue cardValue)
-  {
-    this.cardValue = cardValue;
-  }
+  
+    public static void shuffleCards(){
+        int[] reset = {0};
+        cardsInPlay = reset;
+    }
 }
 

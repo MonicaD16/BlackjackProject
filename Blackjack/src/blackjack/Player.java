@@ -19,7 +19,7 @@ public class Player
 
         playersHand.add(drawnCard);
     // adds drawn card to player's hand
-        System.out.println("Player drew: " + drawnCard.getCardValue());
+        System.out.println("Player drew: " + drawnCard.cardValue);
     }
     
     //add players bet
