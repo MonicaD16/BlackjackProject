@@ -33,4 +33,3 @@ public class Card
         cardsInPlay = reset;
     }
 }
-
