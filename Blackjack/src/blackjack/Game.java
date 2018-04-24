@@ -64,16 +64,13 @@ public class Game {
                 while (dealer.getValueOfHand() < 17) {
                     dealer.addCardToHand();
                 }
-                
-                System.out.println("The value of the dealer's hand is: " + dealer.getValueOfHand());
-                System.out.println("The value of your hand is: " + player.getValueOfHand());
                 break;
             }
             else {
                 System.out.println("Invalid response. Try again.");
             }
         }
-        
+        checkWhoWins();
         reader.close();
     }
 }
