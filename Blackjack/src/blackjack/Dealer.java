@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Dealer
 {
     public int DealerTotal;
-    private ArrayList<Card> dealersHand;
+    public ArrayList<Card> dealersHand;
     
     public Dealer ()
     {

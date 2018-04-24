@@ -14,9 +14,13 @@ public class Game {
     }
     
     public void DealHands() {
-        //Deal two cards to dealer and player
+        player.playerTotal = 0;
+        dealer.DealerTotal = 0;
+        player.playersHand.clear();
+        dealer.dealersHand.clear();
+        //Deal two cards to player 1 to the dealer
+        dealer.addCardToHand();
         for (int i = 0; i < 2; i++) {
-            dealer.addCardToHand();
             player.addCardToHand();
         }
     }
@@ -27,17 +31,21 @@ public class Game {
         
         if (player.getValueOfHand() > 21) {
             System.out.println("You went over 21! You lose!");
+            Player.money -= Player.bet;
         }
         else if (dealer.getValueOfHand() > 21) {
             System.out.println("Dealer went over 21! You win!");
+            Player.money += Player.bet;
         }
         else if (player.getValueOfHand() > dealer.getValueOfHand()) {
             System.out.println("Your hand (" + player.getValueOfHand() + ") is greater than the dealer's (" + dealer.getValueOfHand() + ")");
             System.out.println("You win!");
+            Player.money += Player.bet;
         }
         else if (player.getValueOfHand() <= dealer.getValueOfHand()) {
             System.out.println("Your hand (" + player.getValueOfHand() + ") is less than or equal to the dealer's (" + dealer.getValueOfHand() + ")");
             System.out.println("You lose!");
+            Player.money -= Player.bet;
         }
     }
 
@@ -71,6 +79,7 @@ public class Game {
             }
         }
         checkWhoWins();
-        reader.close();
+        //reader.close();
+        System.out.println();
     }
 }

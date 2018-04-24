@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class Player 
 {
+    public static int money = 1000;
+    public static int bet = 0;
     //player total is the score the player has
     public int playerTotal;
-    private ArrayList<Card> playersHand;
+    public ArrayList<Card> playersHand;
     
     public Player ()
     {
