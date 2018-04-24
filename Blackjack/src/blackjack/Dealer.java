@@ -21,6 +21,18 @@ public class Dealer
         System.out.println("Dealer drew: " + drawnCard.cardValue);
         DealerTotal += drawnCard.cardValue;
     }
+    
+    public int getValueOfHand()
+    {
+        int totalValue = 0;
+        
+        for (Card card : dealersHand) {
+            totalValue += card.cardValue;
+        }
+        
+        return totalValue;
+    }  
+    
     //runs when the player stands. use the player total
     public void endRound(Player play){
         while(DealerTotal < play.playerTotal){

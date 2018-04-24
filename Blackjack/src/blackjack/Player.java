@@ -22,5 +22,14 @@ public class Player
         playerTotal += drawnCard.cardValue;
     }  
     
+    public int getValueOfHand()
+    {
+        int totalValue = 0;
+        
+        for (Card card : playersHand) {
+            totalValue += card.cardValue;
+        }
+        
+        return totalValue;
+    }  
 }
-
