@@ -23,9 +23,14 @@ public class Blackjack {
                 System.out.println("Blackjack Rules:");
                  }
         }
-        while(Player.money > 0){
+      
+        int counter = 0;
+        
+        
+        while(Player.money > 0 && counter!= 10){
             System.out.println("You have $" + Player.money);
             System.out.println("What would you like to bet?");
+        
             try {
                 int val = reader.nextInt();
                 if(val <= Player.money){
@@ -38,8 +43,13 @@ public class Blackjack {
             }
             System.out.println();
             game.Start();
+            counter++;
         }
-        System.out.println("You are out of money. Don't gamble!");
+        if (counter == 10){
+            System.out.println("Congrats! You made a sum of $" + Player.money);
+        } else {
+            System.out.println("You are out of money. Don't gamble!");
+        }
     }
     
     private static void Invalid(){
