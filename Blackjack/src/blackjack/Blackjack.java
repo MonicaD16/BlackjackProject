@@ -50,8 +50,10 @@ public class Blackjack {
             game.Start();
             counter++;
         }
+        int totalMade = (Player.money)-(1000);
         if (counter == 10){
-            System.out.println("Congrats! You made a sum of $" + Player.money);
+            System.out.println("Congrats! You made a value of $" + totalMade);
+            System.out.println("Your total value is $" + Player.money);
         } else {
             System.out.println("You are out of money. Don't gamble!");
         }
