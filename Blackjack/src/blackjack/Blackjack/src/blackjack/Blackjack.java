@@ -15,17 +15,17 @@ public class Blackjack {
         Scanner userInput = new Scanner(System.in);
         while(!startGame.equals("A")){
         System.out.println("Enter 'A' to start or 'B' to go to instructions.");
-        System.out.println("1. Blackjack consists of a 52-card deck.");
-        System.out.println("2. Both the player and dealer are dealt with two cards, however, the player is only given the value of one of the dealer's cards.");
-        System.out.println("3. The player can then decide to 'hit' or 'stand.' If they hit, the player receives another card. Standing reveals the value of the card that the dealer has.");
-        System.out.println("4. If the player has a higher value than the dealer, the dealer will continue to draw new cards until they have reached a value higher than the player or have exceeded a value of 21.");
-        System.out.println("5. If the dealer is over 21, the player wins the amount that they bet, otherwise they lose the value of their bet. ");
         startGame = userInput.next();
                if (startGame.equals("A")) {
                break;
                  } else {
                 System.out.flush();  
                 System.out.println("Blackjack Rules:");
+                System.out.println("1. Blackjack consists of a 52-card deck.");
+                System.out.println("2. Both the player and dealer are dealt with two cards, however, the player is only given the value of one of the dealer's cards.");
+                System.out.println("3. The player can then decide to 'hit' or 'stand.' If they hit, the player receives another card. Standing reveals the value of the card that the dealer has.");
+                System.out.println("4. If the player has a higher value than the dealer, the dealer will continue to draw new cards until they have reached a value higher than the player or have exceeded a value of 21.");
+                System.out.println("5. If the dealer is over 21, the player wins the amount that they bet, otherwise they lose the value of their bet. ");
                  }
         }
       
