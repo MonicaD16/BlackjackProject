@@ -11,6 +11,18 @@ public class Blackjack {
         Scanner reader = new Scanner(System.in);
         Game game = new Game();
         
+        String startGame = "";
+        Scanner userInput = new Scanner(System.in);
+        while(!startGame.equals("A")){
+        System.out.println("Enter 'A' to start or 'B' to go to instructions.");
+        startGame = userInput.next();
+               if (startGame.equals("A")) {
+               break;
+                 } else {
+                System.out.flush();  
+                System.out.println("Blackjack Rules:");
+                 }
+        }
         while(Player.money > 0){
             System.out.println("You have $" + Player.money);
             System.out.println("What would you like to bet?");
